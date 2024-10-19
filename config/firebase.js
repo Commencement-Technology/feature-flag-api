@@ -16,3 +16,7 @@ admin.initializeApp({
     universe_domain: "googleapis.com",
   }),
 });
+
+const db = admin.firestore();
+
+module.exports = { db };
