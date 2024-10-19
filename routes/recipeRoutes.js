@@ -9,7 +9,7 @@ const firebaseAuthMiddleware = require("../middlewares/firebaseAuthMiddleware");
 
 const router = express.Router();
 
-router.get("/", getRecipes);
+router.get("/", firebaseAuthMiddleware, getRecipes);
 router.post("/", firebaseAuthMiddleware, addRecipe);
 router.put("/:id", firebaseAuthMiddleware, updateRecipe);
 router.delete("/:id", firebaseAuthMiddleware, deleteRecipe);
